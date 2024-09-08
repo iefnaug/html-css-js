@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复合选择器</title>
+    <style>
+        body {
+            background-color: #666666;
+        }
+        /*
+        只会选择第一级嵌套元素
+        */
+        div.target > p{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="target">
+    <p>儿子</p>
+    <div>
+        <p>孙子</p>
+    </div>
+    <p>儿子2</p>
+    <div>
+        <p>儿子3</p>
+    </div>
+</div>
+</body>
+</html>

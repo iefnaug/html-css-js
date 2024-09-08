@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复合选择器</title>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+        /*未访问*/
+        .test:link {
+            color: burlywood;
+            text-decoration: none;
+        }
+        /*访问过*/
+        .test:visited {
+            color: greenyellow;
+        }
+        /*鼠标经过*/
+        .test:hover {
+            color: red;
+            text-decoration: line-through;
+        }
+        /*鼠标按下*/
+        .test:active {
+            color: black;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        input:focus {
+            background-color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <a class="test" href="#">点击</a>
+
+    <input type="text">
+    <input type="text">
+    <input type="text">
+</body>
+</html>

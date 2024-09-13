@@ -10,17 +10,15 @@
             background-color: #ff6700;
         }
         .js {
-            font: 900 150px/300px 'Graduate 华文行楷 方正姚体';
+            font: 900 150px 'Graduate';
             color: #ff6700;
             background-color: aquamarine;
-            height: 300px;
             text-align: center;
         }
         .djs {
-            font: 900 150px/300px 'Graduate 华文行楷 方正姚体';
+            font: 900 150px 'Graduate';
             color: aquamarine;
             background-color: #ff6700;
-            height: 300px;
             text-align: center;
         }
         span {
@@ -35,6 +33,18 @@
     <div class="djs"><span id="djs"></span></div>
 
     <script>
+        function init() {
+            let pageHeight = window.innerHeight;
+            let half = Math.floor(pageHeight/2);
+
+            let js = document.querySelector('.js');
+            js.style = `height: ${half}px; line-height: ${half}px`;
+
+            let djs = document.querySelector('.djs');
+            djs.style = `height: ${half}px; line-height: ${half}px`;
+        }
+        init();
+
         //计时
         let element = document.querySelector('#js');
         function jsChange() {
@@ -55,7 +65,6 @@
            let end = now.getTime();
            let start = Date.now();
            let interval = Math.floor((end - start) / 1000);
-           // console.log('interval', interval);
            const hours = Math.floor(interval/3600);
            const minutes = Math.floor(interval%3600/60).toFixed(0);
            const seconds = Math.floor(interval%3600%60);
@@ -65,6 +74,7 @@
         function tidy(num) {
             return num < 10 ? '0' + num : '' + num;
         }
+
         setInterval(function() {
             jsChange();
             djsChange();

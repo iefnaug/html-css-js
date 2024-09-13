@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ks</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ff6700;
+        }
+        .js {
+            font: 900 150px/300px 'Graduate 华文行楷 方正姚体';
+            color: #ff6700;
+            background-color: aquamarine;
+            height: 300px;
+            text-align: center;
+        }
+        .djs {
+            font: 900 150px/300px 'Graduate 华文行楷 方正姚体';
+            color: aquamarine;
+            background-color: #ff6700;
+            height: 300px;
+            text-align: center;
+        }
+        span {
+            display: inline-block;
+            width: 600px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="js"><span id="js"></span></div>
+    <div class="djs"><span id="djs"></span></div>
+
+    <script>
+        //计时
+        let element = document.querySelector('#js');
+        function jsChange() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            element.innerHTML = `${tidy(hours)}:${tidy(minutes)}:${tidy(seconds)}`;
+        }
+
+        //倒计时
+        let element2 = document.querySelector('#djs');
+        function djsChange() {
+           let now = new Date();
+           now.setHours(18);
+           now.setMinutes(0);
+           now.setSeconds(0);
+           let end = now.getTime();
+           let start = Date.now();
+           let interval = Math.floor((end - start) / 1000);
+           // console.log('interval', interval);
+           const hours = Math.floor(interval/3600);
+           const minutes = Math.floor(interval%3600/60).toFixed(0);
+           const seconds = Math.floor(interval%3600%60);
+           element2.innerHTML = `${tidy(hours)}:${tidy(minutes)}:${tidy(seconds)}`;
+        }
+
+        function tidy(num) {
+            return num < 10 ? '0' + num : '' + num;
+        }
+        setInterval(function() {
+            jsChange();
+            djsChange();
+        }, 1000);
+
+    </script>
+</body>
+</html>

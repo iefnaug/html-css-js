@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let pageWidth = window.innerWidth, pageHeight = window.innerHeight;
+        console.log(pageWidth, pageHeight);
+
+        //location
+        console.log(location.hash);
+        console.log(location.href);
+        console.log(location.host)
+        console.log(location.hostname)
+        console.log(location.origin)
+
+        //查询字符串
+        function parse(url) {
+            let query = url.substring(url.indexOf('?') + 1);
+            console.log(query)
+            let urlSearchParams = new URLSearchParams(query);
+            console.log(urlSearchParams)
+            console.log(urlSearchParams.has('_ijt'))
+            console.log(urlSearchParams.get('_ijt'))
+        }
+        parse(location.href)
+        //自动跳转
+        // location.href = 'https://www.baidu.com'
+        // window.location = 'https://www.baidu.com'
+
+        //不会增加历史记录
+        // location.replace('https://www.baidu.com')
+
+        //重新加载页面
+        // location.reload()
+
+        console.log(navigator)
+        console.log(navigator.plugins)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+
+</head>
+<body>
+    <div id="test">点击</div>
+
+    <script>
+        let div = document.querySelector("#test");
+        //DOM0
+        // div.onclick = e => {
+        //     console.log(e.target.id);
+        //     console.log('click me!')
+        //     div.onclick = null
+        // }
+
+        /*
+        DOM2
+        true: 在捕获阶段触发事件
+        false: 在冒泡阶段触发事件
+        事件的触发，先捕获后冒泡
+         */
+        div.addEventListener('click', e => {
+            console.log('click me! 2')
+        }, false)
+
+        div.addEventListener('click', e => {
+            console.log('click me! 1')
+        }, true)
+
+    </script>
+</body>
+</html>

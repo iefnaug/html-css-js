@@ -64,6 +64,10 @@
            now.setSeconds(0);
            let end = now.getTime();
            let start = Date.now();
+           if (end <= start) {
+               element2.innerHTML = "下班了~"
+               return;
+           }
            let interval = Math.floor((end - start) / 1000);
            const hours = Math.floor(interval/3600);
            const minutes = Math.floor(interval%3600/60).toFixed(0);

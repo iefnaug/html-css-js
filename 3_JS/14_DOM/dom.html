@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="test"></div>
+
+
+    <script>
+
+        let html = document.documentElement;     // 取得对<html>的引用
+        console.log(html === document.childNodes[0]);  // true
+        console.log(html === document.firstChild);     // true
+
+        let body = document.body; // 取得对<body>的引用
+
+        let node = document.querySelector('#test');
+        if (node.nodeType === Node.ELEMENT_NODE) {
+            let span = document.createElement('span');
+            span.innerText = '测试插入'
+            node.appendChild(span)
+        }
+    </script>
+</body>
+</html>

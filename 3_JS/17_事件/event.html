@@ -8,6 +8,8 @@
 <body>
     <div id="test">点击</div>
 
+    <input type="text" id="name">
+
     <script>
         let div = document.querySelector("#test");
         //DOM0
@@ -30,6 +32,17 @@
         div.addEventListener('click', e => {
             console.log('click me! 1')
         }, true)
+
+        let name = document.querySelector('#name');
+        //选中
+        name.addEventListener('select', () => {
+            console.log('select...')
+        });
+        name.addEventListener('keypress', e => {
+            if (!/\d/.test(String.fromCharCode(e.charCode)) && e.charCode > 9){
+                e.preventDefault();
+            }
+        });
 
     </script>
 </body>

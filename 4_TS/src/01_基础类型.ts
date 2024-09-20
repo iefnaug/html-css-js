@@ -40,3 +40,13 @@ let someValue: any = 'a';
 let l = (someValue as string).length;
 let l2 = (<string>someValue).length;
 console.log(l, l2)
+
+
+//联合类型，表示取值可以为多种类型中的一种
+ let union: string|number;
+union = 7;
+union = 'str'
+//变量只能调用共有的属性或方法
+// function getLen(some: string|number): number {
+//     return some.length;
+// }

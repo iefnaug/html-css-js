@@ -5,18 +5,66 @@
 	<title>background</title>
 </head>
 <style>
-	div {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	div.d1 {
 		width: 750px;
-		height: 200px;
+		height: 400px;
 		background: burlywood;
-		background-image: url('./images/code.png');
+		background-image: url('./images/cat.jpg');
 		background-repeat: no-repeat;
 		/*background-repeat: repeat-y;*/
-		/* x y */
-		background-position: center bottom;
+		/* x y:默认center */
+		/*background-position: center bottom;*/
+		/*background-position: 10px top;*/
+		overflow-y: scroll;
+		background-attachment: fixed;
+		/*background: burlywood url('./images/cat.jpg') repeat-x fixed center top;*/
+	}
+	.test {
+		width: 100px;
+		height: 100px;
+		/*0 - 1透明度越来越低*/
+		background: rgba(0,0,0,0.5);
 	}
 </style>
 <body>
-	<div></div>
+	<div class="test"></div>
+	<div class="d1">
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+		<p>测试background-attachment</p>
+	</div>
 </body>
 </html>

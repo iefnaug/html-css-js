@@ -11,7 +11,7 @@ function sum1() {
     } = arguments;
 }
 
-interface IArguments {
+interface IArguments0 {
     [index: number]: any; //索引是数字，值是任意类型
     length: number;
     callee: Function;

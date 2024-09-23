@@ -10,3 +10,23 @@ function sum1() {
         callee: Function;
     } = arguments;
 }
+
+interface IArguments {
+    [index: number]: any; //索引是数字，值是任意类型
+    length: number;
+    callee: Function;
+}
+
+//接口定义数组
+interface IArguments2 {
+    [index: string]: any; //索引是字符串，值是任意类型
+}
+
+let aa: IArguments2 = {
+    t: 1,
+    t2: 2,
+    t3: 3,
+}
+console.log(aa)
+let bb: IArguments2 = ['q','b']
+console.log(bb)

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid #ccc;
+            height: 200px;
+            /*
+            让容器内的元素垂直居中
+            */
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .info {
+            width: 300px;
+            display: inline-block;
+            margin-right: 10px;
+            /*
+            针对inline and inline-block，
+            通过在该元素上设置vertical-align来改变自身的对齐方式，
+            通常以较大的元素为参考
+            */
+            vertical-align: middle;
+        }
+        .btn {
+            /*display: inline-block;*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="info">Gutters are the padding between your columns, used to responsively space and align content in the Bootstrap grid system.</p>
+        <button class="btn">yes</button>
+        <button class="btn">no</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 550px;
+        height: 120px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        display: table-cell;
+        vertical-align: middle;
+        box-shadow: 0 0 20px #ccc;
+    }
+    .photo {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        vertical-align: middle;
+        margin-left: 20px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+    .intro {
+        color: #ccccdd;
+    }
+    .btn {
+        margin-left: 200px;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        background-color: #3A75EC;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.15s;
+    }
+    .btn:hover {
+        color: #3A75EC;
+        background-color: #fff;
+        border: 1px solid #3A75EC;
+    }
+
+    .card-container {
+        display: inline-block;
+        margin-top: 20px;
+        margin-right: 10px;
+        width: 200px;
+        height: 300px;
+        box-shadow: 0 0 20px #ccc;
+    }
+    .card-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .card-name {
+        font-weight: bold;
+        text-indent: .5em;
+        margin-top: 5px;
+    }
+    .card-intro {
+        text-indent: .5em;
+        color: #cccccc;
+        margin-top: 5px;
+    }
+    .card-btn {
+        background-color: #3A75EC;
+        color: #fff;
+        margin-left: 8px;
+        margin-top: 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.15s, opacity 0.15s;
+    }
+    .card-btn:hover {
+        background-color: #609275;
+    }
+    .card-btn:active  {
+        background-color: #609275;
+        opacity: 0.8;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <img class="photo" src="../07/thumbnail/cat.jpg" alt="">
+        <span class="intro">What's happening?</span>
+        <button class="btn">Tweet</button>
+    </div>
+
+    <div class="card-container">
+        <img class="card-img" src="../07/thumbnail/cat.jpg" alt="">
+        <p class="card-name">Oliver</p>
+        <p class="card-intro">2 mutual friends</p>
+        <button class="card-btn">Add Friend</button>
+    </div>
+    <div class="card-container">
+        <img class="card-img" src="../07/thumbnail/cat.jpg" alt="">
+        <p class="card-name">Oliver</p>
+        <p class="card-intro">2 mutual friends</p>
+        <button class="card-btn">Add Friend</button>
+    </div>
+</body>
+</html>

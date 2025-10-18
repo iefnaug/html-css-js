@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p, span, a {
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        .item-row {
+            width: 400px;
+            height: 120px;
+            margin: 20px;
+            /*border: 1px solid #888888;*/
+            border-radius: 10px;
+            box-shadow: 0 0 10px #888888;
+        }
+
+        .item-left {
+            display: inline-block;
+            /*vertical-align: middle;*/
+            margin-top: 20px;
+        }
+
+        .item-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: top;
+        }
+        .item-content {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .item-content > p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-intro, .item-type {
+            color: rgb(96, 96, 96);
+        }
+        .item-follow {
+            background-color: rgb(24, 119, 242);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="item-row">
+        <div class="item-left">
+            <img class="item-pic" src="../07/thumbnail/cat.jpg" alt="cat">
+            <div class="item-content">
+                <p class="item-name">oliver</p>
+                <p class="item-intro">the cat</p>
+                <p class="item-type">Popular</p>
+            </div>
+        </div>
+        <button class="item-follow">Follow</button>
+    </div>
+</body>
+</html>

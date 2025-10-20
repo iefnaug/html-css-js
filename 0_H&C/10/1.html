@@ -20,18 +20,28 @@
         }
 
         .item-row {
+            margin: 20px;
             width: 400px;
             height: 120px;
-            margin: 20px;
-            /*border: 1px solid #888888;*/
             border-radius: 10px;
             box-shadow: 0 0 10px #888888;
+
+            /*display: flex;*/
+            /*flex-direction: row;*/
+            /*justify-content: left;*/
+            /*align-items: center;*/
+        }
+
+        .item-row:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle; /* 用来触发基线对齐 */
         }
 
         .item-left {
             display: inline-block;
-            /*vertical-align: middle;*/
-            margin-top: 20px;
+            vertical-align: middle;
         }
 
         .item-pic {
@@ -47,7 +57,7 @@
         }
         .item-content > p {
             font-size: 1em;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .item-name {
             font-weight: bold;
@@ -61,6 +71,9 @@
             border: none;
             padding: 10px 20px;
             border-radius: 4px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 100px;
         }
     </style>
 </head>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 200px;
+            height: 350px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        .container > img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .bottom {
+            margin-left: 10px;
+        }
+        .name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .head {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        .intro {
+            margin-left: 10px;
+            color: rgb(96,96,96);
+        }
+        .btn {
+            font-weight: bold;
+            color: white;
+            background-color: dodgerblue;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../07/thumbnail/cat.jpg" alt="">
+        <div class="bottom">
+            <p class="name">Oliver</p>
+            <p>
+                <img class="head" src="../07/thumbnail/channel-1.jpeg" alt="">
+                <span class="intro">2 mutual friends</span>
+            </p>
+            <button class="btn">Add Friend</button>
+        </div>
+    </div>
+</body>
+</html>

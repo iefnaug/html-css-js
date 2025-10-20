@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            height: 300px;
+            border: 1px solid black;
+        }
+        .container:after {
+            content: '';
+            display: inline-block;
+        }
+        .pic {
+            width: 200px;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background-color: #888888;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<!--        <span>文字</span>-->
+        <img class="pic" src="../07/thumbnail/cat.jpg" alt="">
+        <div class="square"></div>
+    </div>
+</body>
+</html>

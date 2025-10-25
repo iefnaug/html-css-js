@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>grid</title>
+    <style>
+        .container {
+            display: grid;
+            /*display: inline-grid;*/
+            grid-template-columns: auto auto auto auto;
+            background-color: dodgerblue;
+            padding: 10px;
+            gap: 20px 40px;
+        }
+
+        .container div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .item-special {
+            grid-column: 2/4;
+            grid-row: 2/4;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div class="item-special">5</div>
+    <div>6</div>
+    <div>4</div>
+    <div>4</div>
+    <div>4</div>
+    <div>4</div>
+    <div>4</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid-tracks</title>
+    <style>
+        /*
+        grid-template-columns - Defines the number and width of the columns in the grid
+        grid-template-rows - Defines the number and height of the rows in the grid
+        grid-template-areas - Defines how to display columns and rows, using named grid items
+         */
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-column-gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-columns: 100px 200px auto;
+            grid-column-gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .container3 {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-column-gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .container4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 10px;
+        }
+
+        .container5 {
+            display: grid;
+            grid-template-columns: minmax(80px, 1fr) 200px 200px;
+            margin-bottom: 10px;
+        }
+
+        .item {
+            background-color: #609275;
+        }
+
+        .item2 {
+            background-color: #FDD115;
+        }
+
+        .container6 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 20px 40px;
+            grid-gap: 10px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="container2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="container3">
+        <div class="item">1</div>
+        <div class="item2">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="container4">
+        <div class="item">1</div>
+        <div class="item2">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="container5">
+        <div class="item">1</div>
+        <div class="item2">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="container6">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+
+</body>
+</html>

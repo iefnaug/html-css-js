@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>youtube</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        .reggae-one-regular {
+            font-family: "Reggae One", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .roboto-p {
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p, span, a {
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        /**
+        -------------------------------------------样式
+         */
+
+        .search-bar {
+            display: block;
+        }
+
+        .container-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 40px;
+        }
+
+        .video-preview {
+            width: 100%;
+        }
+
+        .thumbnail {
+            width: 100%;
+            /*height: 300px;*/
+            /*border: 1px solid red;*/
+            /*object-fit: cover;*/
+            /*object-position: center;*/
+
+            /*object-fit: contain;*/
+        }
+
+        .video-info-grid {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+        }
+
+        .channel-picture {
+            width: 50px;
+        }
+
+        .profile-picture {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .video-info {
+            display: inline-block;
+            padding-left: 10px;
+        }
+
+        .video-title {
+            /*width: 300px;*/
+            margin-top: 0;
+            margin-bottom: 10px;
+            line-height: 1.3em;
+        }
+
+        .video-author, .video-stats {
+            font-size: 0.9em;
+            color: rgb(96, 96, 96);
+        }
+
+        .video-stats {
+            margin-top: 5px;
+        }
+
+        .thumbnail-row {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<label>
+    <input type="text" placeholder="Search" class="search-bar">
+</label>
+<div class="container-grid">
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="../07/thumbnail/thumbnail-1.webp" alt="">
+        </div>
+        <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="../07/thumbnail/channel-1.jpeg" alt="">
+            </div>
+            <div class="video-info">
+                <p class="video-title"><strong>Talking Tech and AI with Google CEO Sundar Pichai!</strong></p>
+                <p class="video-author">Marques Brownlee</p>
+                <p class="video-stats">3.4M views &#183; 6 months ago</p>
+            </div>
+        </div>
+    </div>
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="../07/thumbnail/thumbnail-2.webp" alt="">
+        </div>
+        <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="../07/thumbnail/channel-2.jpeg" alt="">
+            </div>
+            <div class="video-info">
+                <p class="video-title"><strong>Try Not To Laugh Challenge #9</strong></p>
+                <p class="video-author">Marques Brownlee</p>
+                <p class="video-stats">1.9M views &#183; 4 years ago</p>
+            </div>
+        </div>
+    </div>
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="../07/thumbnail/thumbnail-2.webp" alt="">
+        </div>
+        <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="../07/thumbnail/channel-2.jpeg" alt="">
+            </div>
+            <div class="video-info">
+                <p class="video-title"><strong>Try Not To Laugh Challenge #9</strong></p>
+                <p class="video-author">Marques Brownlee</p>
+                <p class="video-stats">1.9M views &#183; 4 years ago</p>
+            </div>
+        </div>
+    </div>
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="../07/thumbnail/thumbnail-2.webp" alt="">
+        </div>
+        <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="../07/thumbnail/channel-2.jpeg" alt="">
+            </div>
+            <div class="video-info">
+                <p class="video-title"><strong>Try Not To Laugh Challenge #9</strong></p>
+                <p class="video-author">Marques Brownlee</p>
+                <p class="video-stats">1.9M views &#183; 4 years ago</p>
+            </div>
+        </div>
+    </div>
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="../07/thumbnail/thumbnail-2.webp" alt="">
+        </div>
+        <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="../07/thumbnail/channel-2.jpeg" alt="">
+            </div>
+            <div class="video-info">
+                <p class="video-title"><strong>Try Not To Laugh Challenge #9</strong></p>
+                <p class="video-author">Marques Brownlee</p>
+                <p class="video-stats">1.9M views &#183; 4 years ago</p>
+            </div>
+        </div>
+    </div>
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="../07/thumbnail/thumbnail-2.webp" alt="">
+        </div>
+        <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="../07/thumbnail/channel-2.jpeg" alt="">
+            </div>
+            <div class="video-info">
+                <p class="video-title"><strong>Try Not To Laugh Challenge #9</strong></p>
+                <p class="video-author">Marques Brownlee</p>
+                <p class="video-stats">1.9M views &#183; 4 years ago</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

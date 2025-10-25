@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid-align</title>
+    <style>
+        /*
+        justify-content - Aligns the grid content when it does not use all available space on the main-axis (horizontally)
+        align-content - Aligns the grid content when it does not use all available space on the cross-axis (vertically)
+        place-content: start center; - the align-content value is 'start' and justify-content value is 'center'
+         */
+        .item {
+            background-color: #31a662;
+            padding: 10px;
+            /*text-align: center;*/
+            /*justify-self: center;*/
+            justify-self: right;
+        }
+
+        .item2 {
+            background-color: #FDD115;
+            justify-self: end;
+        }
+
+        .container {
+            height: 200px;
+            width: 600px;
+            background-color: #3A75EC;
+            padding: 10px;
+            display: grid;
+            gap: 10px;
+            /*grid-template-columns: repeat(3, 100px);*/
+            grid-template-columns: repeat(3, 1fr);
+            /*水平方向所有的间距相等*/
+            /*justify-content: space-evenly;*/
+            /*水平方向分为n块，在每块内居中*/
+            /*justify-content: space-around;*/
+            /*justify-content: space-between;*/
+            /*justify-content: center;*/
+            /*justify-content: start;*/
+            /*justify-content: end;*/
+
+            /*align-content: center;*/
+            /*align-content: end;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+    </div>
+</body>
+</html>

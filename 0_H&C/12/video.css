@@ -1,0 +1,63 @@
+/**
+-------------------------------------------样式
+ */
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+}
+
+.video-preview {
+    width: 100%;
+}
+
+.thumbnail {
+    width: 100%;
+    /*height: 300px;*/
+    /*border: 1px solid red;*/
+    /*object-fit: cover;*/
+    /*object-position: center;*/
+
+    /*object-fit: contain;*/
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.channel-picture {
+    width: 50px;
+}
+
+.profile-picture {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.video-info {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.video-title {
+    /*width: 300px;*/
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.3em;
+}
+
+.video-author, .video-stats {
+    font-size: 0.9em;
+    color: rgb(96, 96, 96);
+}
+
+.video-stats {
+    margin-top: 5px;
+}
+
+.thumbnail-row {
+    margin-bottom: 10px;
+}

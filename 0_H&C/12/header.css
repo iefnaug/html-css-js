@@ -1,0 +1,28 @@
+.header {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-section {
+    background-color: #3A75EC;
+    width: 150px;
+}
+
+.middle-section {
+    background-color: #31a662;
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+}
+
+.right-section {
+    background-color: #764ba2;
+    width: 200px;
+}
+
+.search-bar {
+    display: block;
+}

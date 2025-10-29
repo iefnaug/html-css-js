@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>container</title>
+    <style>
+        body {
+            background-color: #609275;
+        }
+
+        /**
+Flex容器
+│
+├── 主轴方向（默认：水平）
+│    └── justify-content → 控制左右分布
+│
+└── 交叉轴方向（默认：垂直）
+     ├── align-items → 控制单行内每个元素的垂直对齐
+     └── align-content → 控制多行之间的垂直分布
+
+         */
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            /*flex-wrap: nowrap 默认值，强行挤在一行*/
+            flex-wrap: wrap;
+            /*flex-flow: row nowrap;*/
+
+            /*水平方向的对齐方式*/
+            /*justify-content: center;*/
+            /*justify-content: start;*/
+            /*justify-content: end;*/
+            /*justify-content: space-around;*/
+            /*justify-content: space-between;*/
+            /*justify-content: space-evenly;*/
+
+            /*控制单行内每个元素的垂直对齐*/
+            /*align-items: center;*/
+            /*align-items: start;*/
+            /*align-items: end;*/
+            /*在flex-item不指定高度的情况下，会拉升内容*/
+            /*align-items: stretch;*/
+
+            /*控制多行之间的垂直分布*/
+            /*align-content: center;*/
+            /*align-content: end;*/
+            /*align-content: start;*/
+            /*align-content: center;*/
+
+            width: 660px;
+            height: 600px;
+            border: 1px solid #0F0F0F;
+        }
+        .item {
+            width: 100px;
+            /*height: 100px;*/
+            background-color: #3A75EC;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

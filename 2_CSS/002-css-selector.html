@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css-selector</title>
+    <style>
+        /*
+        css selectors
+         */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #609275;
+        }
+
+        .box {
+            background-color: #3A75EC;
+        }
+
+        #boxId {
+            background-color: #764ba2;
+        }
+
+        div[title] {
+            background-color: #888888;
+        }
+
+        /*
+        伪类 作用于元素之上
+         */
+        /*p:hover {*/
+        /*    background-color: #609275;*/
+        /*}*/
+
+        /*p::first-line {*/
+        /*    background-color: #764ba2;*/
+        /*}*/
+
+        /*p {*/
+        /*    background-color: #3A75EC;*/
+        /*}*/
+
+        article p:first-child::first-line {
+            font-size: 120%;
+            font-weight: bold;
+        }
+
+        article p:invalid {
+            font-size: 120%;
+            font-weight: bold;
+        }
+
+        /*
+        伪元素 作用于元素中的部分文本
+         */
+        .myBox::before {
+            content: ' ➥';
+        }
+
+        .myBox::after {
+            content: " ➥";
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="box"></div>
+    <div id="boxId"></div>
+    <div title="test"></div>
+    <p>Someone from xAI reached out and asked me to retest grok-4-fast, because they've improved the injected system prompts. Huge improvement!</p>
+
+    <article>
+        <p>
+            蔬菜对你有好处，所以你需要多吃大头菜、大葱、白萝卜、苋菜、番茄酱、甜瓜、红豆、大蒜。
+        </p>
+
+        <p>
+            秋葵浓汤、甜菜叶、玉米、鸡冠菜、菊苣、秋葵浓汤、葫芦。欧芹、葱、西葫芦、塌棵菜、豌豆芽、蚕豆、羽衣甘蓝、蒲公英、秋葵、裙带菜、番茄。蒲公英、黄瓜、花生、豌豆、花生、鸡冠菜、西葫芦。
+        </p>
+    </article>
+
+    <p class="myBox">初始内容</p>
+</body>
+</html>

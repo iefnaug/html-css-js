@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box > * {
+            border: 2px solid rgb(96 139 168);
+            border-radius: 5px;
+            background-color: rgb(96 139 168 / 0.2);
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 2px dotted rgb(96 139 168);
+            display: flex;
+            flex-direction: column;
+            /*
+            align-items 设置交叉轴方向的对齐方式
+             */
+            /*align-items: flex-start;*/
+            /*align-items: flex-end;*/
+            align-items: stretch;
+
+            /*
+            justify-content 设置主轴方向的对齐方式
+             */
+            /*justify-content: center;*/
+            /*justify-content: flex-end;*/
+            /*justify-content: space-evenly;*/
+            /*justify-content: space-around;*/
+            justify-content: space-between;
+        }
+
+        .box2 {
+            margin-top: 20px;
+            border: 2px dotted rgb(96 139 168);
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1em;
+        }
+
+        .box2 > * {
+            border: 2px solid rgb(96 139 168);
+            border-radius: 5px;
+            background-color: rgb(96 139 168 / 0.2);
+            padding: 1em;
+            flex: 1 1 200px;
+        }
+
+        .box3 {
+            border: 1px dashed rgb(96 139 168);
+            margin-top: 20px;
+            display: flex;
+            /*flex-direction: column;*/
+            align-items: stretch;
+            height: 200px;
+        }
+
+        .box3 > div {
+            flex: 1 1 100px;
+            background-color: rgb(96 139 168 / 0.2);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three <br />has <br />extra <br />text</div>
+    </div>
+
+    <div class="box2">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven</div>
+    </div>
+
+    <div class="box3">
+        <div>1</div>
+        <div style="align-self: center">2</div>
+        <div style="align-self: flex-start">3</div>
+        <div style="align-self: flex-end">4</div>
+    </div>
+</body>
+</html>

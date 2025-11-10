@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-intro</title>
+    <style>
+        .box > * {
+            border: 2px solid rgb(96 139 168);
+            border-radius: 5px;
+            background-color: rgb(96 139 168 / 0.2);
+            width: 100px;
+        }
+
+        .box {
+            width: 500px;
+            border: 2px dotted rgb(96 139 168);
+            display: flex;
+            /*flex-direction: row;*/
+            /*flex-wrap: wrap;*/
+            /*flex-flow: row wrap;*/
+        }
+
+        .one {
+            flex: 1;
+        }
+
+        .two {
+            flex: 1;
+        }
+
+        .three {
+            flex: 2;
+        }
+
+    </style>
+</head>
+<!--
+文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 display 属性值改为 flex 或者 inline-flex。
+完成这一步之后，容器中的直系子元素就会变为 flex 元素。由于所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：
+
+元素排列为一行（flex-direction 属性的初始值是 row）。
+元素从主轴的起始线开始。
+元素不会在主维度方向拉伸，但是可以缩小。
+元素被拉伸来填充交叉轴大小。
+flex-basis 属性为 auto。
+flex-wrap 属性为 nowrap。
+这会让你的元素呈线形排列，并且把自己的大小作为主轴上的大小。如果有太多元素超出容器，它们会溢出而不会换行。如果一些元素比其他元素高，那么元素会沿交叉轴被拉伸来填满它的大小。
+
+-->
+<body>
+    <div class="box">
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three <br/>has <br/>extra <br/>text</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>control the main axis</title>
+    <style>
+        .min-content {
+            /**
+            the max-width equals the longest word
+             */
+            width: min-content;
+            border: 1px dashed #027d0f;
+        }
+
+        .max-content {
+            width: max-content;
+            border: 1px dashed #027d0f;
+        }
+
+        .box {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 500px;
+            /*height: 200px;*/
+            margin-top: 20px;
+            border: 1px dashed #027d0f;
+            padding: 10px;
+        }
+
+        .box > div {
+            border: 1px solid #027d0f;
+            flex: 0 0 auto;
+        }
+
+        .box :first-child {
+            /*
+            when flex-basis is content, width is invalid
+             */
+            /*flex: 0 0 content;*/
+            /*
+            when flex-grow is greater than 0, this flex-item will occupy the free space proportionally
+             */
+            flex: 1 0 0;
+            width: 100px;
+        }
+
+
+        .box2 {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 500px;
+            /*height: 200px;*/
+            margin-top: 20px;
+            border: 1px dashed #027d0f;
+            padding: 10px;
+        }
+
+        .box2 > div {
+            background-color: #609275;
+            padding: 10px;
+            border-radius: 10px;
+            flex: 1 1 0;
+        }
+        .box2 :last-child {
+            /*width: 200px;*/
+            flex: 2 1 auto;
+        }
+
+
+        .box3 > * {
+            border: 2px solid rgb(96 139 168);
+            border-radius: 5px;
+            background-color: rgb(96 139 168 / 0.2);
+            flex: 0 1 auto;
+            width: 200px;
+        }
+
+        .box3 {
+            margin-top: 30px;
+            width: 500px;
+            border: 2px dotted rgb(96 139 168);
+            display: flex;
+        }
+
+
+        .box4 > * {
+            border: 2px solid rgb(96 139 168);
+            border-radius: 5px;
+            background-color: rgb(96 139 168 / 0.2);
+            flex: 1 1 auto;
+        }
+
+        .box4 {
+            margin-top: 30px;
+            border: 2px dotted rgb(96 139 168);
+            width: 300px;
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="min-content">
+        He's very interesting
+    </div>
+    <div class="max-content">
+        He's very interesting He's very interesting He's very interesting
+    </div>
+
+    <div class="box">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+    </div>
+
+    <div class="box2">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+    </div>
+
+
+    <div class="box3">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three has more content</div>
+    </div>
+
+    <div class="box4">
+        <div>Item One</div>
+        <div>Item Two</div>
+        <div>Item Three has more content and so has a larger size</div>
+    </div>
+
+</body>
+</html>

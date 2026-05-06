@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box > * {
+            border: 2px solid rgb(96 139 168);
+            border-radius: 5px;
+            background-color: rgb(96 139 168 / 0.2);
+            width: 300px;
+        }
+
+        .box {
+            border: 2px dotted rgb(96 139 168);
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .one {
+            /*flex-grow flex-shrink flex-basis*/
+            /*flex: 1 1 auto;*/
+            flex: 1;
+        }
+
+        .two {
+            /*flex: 1 1 auto;*/
+            flex: 1;
+        }
+
+        .three {
+            /*flex: 2 1 auto;*/
+            flex: 2; /*flex: 2 1 0*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three</div>
+    </div>
+</body>
+</html>

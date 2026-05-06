@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box > * {
+            border: 2px solid rgb(96 139 168);
+            border-radius: 5px;
+            background-color: rgb(96 139 168 / 0.2);
+            width: 100px;
+            /*flex: 1;*/
+        }
+
+        .box {
+            width: 500px;
+            height: 130px;
+            border: 2px dotted rgb(96 139 168);
+            display: flex;
+
+            /*默认*/
+            /*align-items: stretch;*/
+            /*align-items: flex-start;*/
+            /*align-items: flex-end;*/
+            align-items: center;
+            /*justify-content: space-between;*/
+            /*justify-content: space-around;*/
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three <br />has <br />extra <br />text</div>
+    </div>
+</body>
+</html>

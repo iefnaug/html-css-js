@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        .box > * {
+            border: 2px solid rgb(96 139 168);
+            border-radius: 5px;
+            background-color: rgb(96 139 168 / 0.2);
+            width: 200px;
+        }
+
+        .box {
+            width: 500px;
+            border: 2px dotted rgb(96 139 168);
+            display: flex;
+            /*默认是不允许换行显示的*/
+            /*flex-wrap: wrap;*/
+            /*flex-direction + flex-wrap*/
+            flex-flow: row-reverse wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+    </div>
+</body>
+</html>

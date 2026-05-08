@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Dashboard</title>
+    <link rel="stylesheet" href="style/flex.css">
+</head>
+
+<body>
+
+<!-- header -->
+<div class="header">
+
+    <div class="logo">Admin</div>
+
+    <div class="search">
+        <input type="text" placeholder="搜索...">
+    </div>
+
+    <div class="user">
+        <div>FG</div>
+        <div class="avatar"></div>
+    </div>
+
+</div>
+
+<!-- main -->
+<div class="main">
+
+    <!-- sidebar -->
+    <div class="sidebar">
+
+        <div class="menu-item">首页</div>
+        <div class="menu-item">用户管理</div>
+        <div class="menu-item">订单管理</div>
+        <div class="menu-item">数据统计</div>
+
+        <div class="menu-item logout">退出登录</div>
+
+    </div>
+
+    <!-- content -->
+    <div class="content">
+
+        <!-- cards -->
+        <div class="card-container">
+
+            <div class="card highlight">
+                <div class="card-top">
+                    <div>重点指标</div>
+                    <div>🔥</div>
+                </div>
+
+                <div class="number">9999</div>
+            </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <div>今日用户</div>
+                    <div>👤</div>
+                </div>
+
+                <div class="number">1520</div>
+            </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <div>订单量</div>
+                    <div>📦</div>
+                </div>
+
+                <div class="number">320</div>
+            </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <div>销售额</div>
+                    <div>💰</div>
+                </div>
+
+                <div class="number">¥89k</div>
+            </div>
+
+        </div>
+
+        <!-- table -->
+        <div class="table-box">
+
+            <div class="table-header">
+                <h3>用户列表</h3>
+
+                <div class="actions">
+                    <button class="btn">新增</button>
+                    <button class="btn">导出</button>
+                </div>
+            </div>
+
+            <div class="table-content">
+
+                <div class="row">
+                    <div class="col">1</div>
+                    <div class="col large">张三</div>
+                    <div class="col">管理员</div>
+                    <div class="col">在线</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">2</div>
+                    <div class="col large">李四</div>
+                    <div class="col">普通用户</div>
+                    <div class="col">离线</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">3</div>
+                    <div class="col large">王五</div>
+                    <div class="col">VIP</div>
+                    <div class="col">在线</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- footer -->
+<div class="footer">
+    Footer
+</div>
+
+</body>
+</html>

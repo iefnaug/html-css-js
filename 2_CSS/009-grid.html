@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /*box-sizing: content-box;*/
+        }
+
+        .wrapper {
+            display: grid;
+            /*grid-template-columns: 200px 200px 200px;*/
+            /*grid-template-columns: 1fr 2fr 1fr;*/
+            /*grid-template-columns: 100px 3fr 1fr;*/
+            grid-template-columns: 100px repeat(3, 1fr) 200px;
+            /*指定行高*/
+            grid-auto-rows: minmax(100px, auto)
+        }
+
+        .wrapper {
+            border: 2px solid #f76707;
+            border-radius: 5px;
+            background-color: #fff4e6;
+        }
+
+        .wrapper > div {
+            border: 2px solid #ffa94d;
+            border-radius: 5px;
+            background-color: #ffd8a8;
+            padding: 1em;
+            color: #d9480f;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div>一<br>一<br>一<br>一<br>一<br>一<br>一<br>一<br>一<br>一<br>一<br></div>
+    <div>二</div>
+    <div>三</div>
+    <div>四</div>
+    <div>五</div>
+</div>
+
+</body>
+</html>

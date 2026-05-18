@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复杂 CSS Grid 布局示例 - 仪表盘</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            /* 定义列轨道 */
+            grid-template-columns: 260px 1fr 1fr 280px;
+            /* 定义行轨道 */
+            grid-template-rows: 80px 120px 1fr 1fr 80px;
+            gap: 16px;
+            height: 100vh;
+        }
+
+        /* 使用 grid-area 命名区域，更加清晰 */
+        .header {
+            grid-column: 1 / -1;           /* 占满所有列 */
+            background: #1e3a8a;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            border-radius: 8px;
+            font-size: 1.4rem;
+        }
+
+        .sidebar {
+            grid-row: 2 / -2;              /* 从第2行到倒数第2行 */
+            background: #1e2937;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-y: auto;
+        }
+
+        .main {
+            grid-column: 2 / 4;            /* 占据中间两列 */
+            grid-row: 2 / 5;               /* 占据中间三行 */
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            display: grid;
+            /* 主内容区嵌套 Grid */
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr;
+            gap: 16px;
+        }
+
+        .widget {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .chart-area {
+            grid-column: 1 / -1;           /* 占满主内容区两列 */
+            background: #e0f2fe;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: #0369a1;
+        }
+
+        .stats {
+            grid-column: 4;                /* 最右侧一列 */
+            grid-row: 2 / 5;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .footer {
+            grid-column: 1 / -1;
+            background: #334155;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            border-radius: 8px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 1024px) {
+            .dashboard {
+                grid-template-columns: 220px 1fr 1fr;
+                grid-template-rows: 70px 100px 1fr 1fr 70px;
+            }
+            .stats { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <!-- 头部 -->
+    <header class="header">
+        <strong>企业数据仪表盘</strong>
+    </header>
+
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+        <h3 style="margin-bottom:20px;">导航菜单</h3>
+        <ul style="list-style:none; line-height:2.2;">
+            <li>🏠 首页概览</li>
+            <li>📊 数据分析</li>
+            <li>📈 销售报表</li>
+            <li>👥 用户管理</li>
+            <li>⚙️ 系统设置</li>
+        </ul>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main">
+        <div class="widget">
+            <h4>今日关键指标</h4>
+            <p style="font-size:2.2rem; margin:12px 0; color:#1e40af;">¥ 248,650</p>
+            <small style="color:#16a34a;">↑ 12.4% 较昨日</small>
+        </div>
+        <div class="widget">
+            <h4>活跃用户</h4>
+            <p style="font-size:2.2rem; margin:12px 0; color:#1e40af;">8,942</p>
+            <small style="color:#16a34a;">↑ 5.8% 较上周</small>
+        </div>
+
+        <!-- 图表占位 -->
+        <div class="chart-area widget">
+            这里可以放置 Chart.js / ECharts 等图表
+        </div>
+    </main>
+
+    <!-- 右侧统计卡片 -->
+    <div class="stats">
+        <div class="stat-card">
+            <h4>订单数量</h4>
+            <p style="font-size:2rem; color:#1e40af;">1,284</p>
+            <small>本月</small>
+        </div>
+        <div class="stat-card">
+            <h4>转化率</h4>
+            <p style="font-size:2rem; color:#1e40af;">68.4%</p>
+            <small>↑ 3.2%</small>
+        </div>
+        <div class="stat-card">
+            <h4>退货率</h4>
+            <p style="font-size:2rem; color:#dc2626;">2.1%</p>
+            <small>↓ 0.8%</small>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div>© 2026 公司名称</div>
+        <div>数据更新于 10 分钟前</div>
+        <div>导出报表</div>
+    </footer>
+</div>
+
+</body>
+</html>

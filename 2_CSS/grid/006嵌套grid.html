@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(auto-fill, 2fr); gap: 20px;">
+    <!-- 左边嵌套 -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background:#e2e8f0; padding:15px;">
+        <div style="background:white; padding:20px; text-align:center;">A</div>
+        <div style="background:white; padding:20px; text-align:center;">B</div>
+        <div style="background:white; padding:20px; text-align:center;">C</div>
+        <div style="background:white; padding:20px; text-align:center;">D</div>
+    </div>
+
+    <!-- 右边普通内容 -->
+    <div style="background:#64748b; color:white; padding:30px; grid-row: span 2">右侧内容区</div>
+
+    <div style="height: 200px;"></div>
+</div>
+
+</body>
+</html>

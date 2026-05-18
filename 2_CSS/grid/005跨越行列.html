@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .container :nth-child(1) {
+            grid-column: 1/3;
+            /*grid-column: span 2;*/
+            background:#ec4899;
+            padding:40px;
+            color:white;
+        }
+
+        .container :nth-child(2) {
+            grid-row: span 2;
+            /*grid-row: 1/3;*/
+            background:#14b8a6;
+            padding:40px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div style="">跨2列</div>
+    <div style="">跨2行</div>
+    <div style="background:#f59e0b; padding:40px; color:white;">普通</div>
+    <div style="background:#f59e0b; padding:40px; color:white;">普通</div>
+</div>
+</body>
+</html>

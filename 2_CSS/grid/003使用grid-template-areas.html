@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div style="display: grid; grid-template-areas:
+      'header header'
+      'sidebar main'
+      'footer footer';
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: 80px 1fr 60px;
+      gap: 10px; height: 400px;">
+
+        <div style="grid-area: header; background:#1e40af; color:white;">Header</div>
+        <div style="grid-area: sidebar; background:#334155; color:white;">Sidebar</div>
+        <div style="grid-area: main; background:#f1f5f9;">Main Content</div>
+        <div style="grid-area: footer; background:#1e2937; color:white;">Footer</div>
+    </div>
+</body>
+</html>

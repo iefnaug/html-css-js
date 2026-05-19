@@ -19,6 +19,7 @@
 
             /*多行的时候*/
             align-content: space-evenly;
+            gap: 12px;
         }
 
         .container > div {
@@ -57,7 +58,8 @@
 
     <div class="container2">
         <div>1</div>
-        <div style="margin-left: auto">2</div>
+        <!--order默认是0，越小越靠前-->
+        <div style="margin-left: auto; order: 1">2</div>
         <div>3</div>
     </div>
 </body>

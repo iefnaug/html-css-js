@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>direction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 0 auto;
+            width: 1000px;
+            border: 2px dashed darkgoldenrod;
+            /*overflow: hidden;*/
+        }
+        .box {
+            width: 400px;
+            min-width: 400px;
+            height: 100px;
+            /*border-radius: 50%;*/
+            background-color: #609275;
+            text-align: center;
+            line-height: 100px;
+        }
+        .row {
+            height: 200px;
+            border: 1px solid darkgoldenrod;
+            display: flex;
+            /*flex-direction: row;*/
+            /*flex-wrap: wrap;*/
+            /*简写*/
+            flex-flow: row wrap;
+
+            /*交叉轴方向对齐方式*/
+            /*align-items: stretch; !*填满flex容器*!*/
+            /*align-items: flex-start;*/
+            /*align-items: flex-end;*/
+            align-items: center;
+
+            /*主轴方向对齐方式*/
+            /*justify-content: flex-end;*/
+            /*justify-content: center;*/
+            /*justify-content: space-around;*/
+            /*justify-content: space-between;*/
+            justify-content: space-evenly;
+        }
+        .row > div {
+            /*min-width: 400px;*/
+            height: 100px;
+            background-color: #609275;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .row-reverse {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+        .column-reverse {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+<!--            <div class="box">1</div>-->
+<!--            <div class="box">2</div>-->
+<!--            <div class="box">3</div>-->
+<!--            <div style="flex: 2 1 200px;">1</div>-->
+<!--            <div style="flex: 1 1 200px;">2</div>-->
+<!--            <div style="flex: 1 1 200px;">3</div>-->
+
+            <div style="flex: 0 1 200px;">1</div>
+            <div style="flex: 0 1 200px;">2</div>
+            <div style="flex: 0 1 200px;">3</div>
+        </div>
+        <br>
+        <div class="row-reverse">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <br>
+        <div class="column">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <br>
+        <div class="column-reverse">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </div>
+</body>
+</html>

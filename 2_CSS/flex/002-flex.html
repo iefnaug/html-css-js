@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            height: 400px;
+            width: 1000px;
+            border: 2px dashed darkgoldenrod;
+            margin: 0 auto;
+            display: flex;
+            /*flex-flow: row nowrap;*/
+            flex-flow: row wrap;
+            /*justify-content: center;*/
+            justify-content: flex-start;
+            direction: rtl;
+            /*align-items: center;*/
+
+            /*多行的时候*/
+            align-content: space-evenly;
+        }
+
+        .container > div {
+            width: 400px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: #609275;
+        }
+
+        .container2 {
+            width: 500px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px dashed darkgoldenrod;
+            display: flex;
+        }
+
+        .container2 > div {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: #609275;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<!--        <div style="align-self: flex-end;">1</div>-->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <br>
+
+    <div class="container2">
+        <div>1</div>
+        <div style="margin-left: auto">2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

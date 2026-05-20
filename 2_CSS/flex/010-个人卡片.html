@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .profile {
+            width: 320px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .stats {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="profile">
+    <img src="https://picsum.photos/120" alt="" class="src">
+    <h2>张晓明</h2>
+    <p>前端开发</p>
+    <div class="stats">
+        <div>122<br><small>关注</small></div>
+        <div>66<br><small>粉丝</small></div>
+        <div>56<br><small>文章</small></div>
+    </div>
+</div>
+</body>
+</html>

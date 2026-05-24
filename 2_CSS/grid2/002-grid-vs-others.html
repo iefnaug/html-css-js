@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            grid和flex布局上的区别
+        */
+        .grid {
+            display: grid;
+            width: 600px;
+            border: 1px solid black;
+            grid-template-columns: repeat(3, minmax(180px, 1fr));
+        }
+        .grid > div {
+            height: 100px;
+            background-color: #3b82f6;
+        }
+
+        .flex {
+            display: flex;
+            flex-flow: row wrap;
+            width: 600px;
+            border: 1px solid black;
+        }
+
+        .flex > div {
+            flex: 1;
+            min-width: 180px;
+            /*max-width: 200px;*/
+            height: 100px;
+            background-color: #3b82f6;
+        }
+
+        .grid-align {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 600px;
+            grid-auto-rows: minmax(200px, 1fr);
+            border: 1px solid black;
+            align-items: center;
+        }
+
+        .grid-align > div {
+            background-color: #3b82f6;
+            padding: 20px;
+        }
+
+        .grid-align :nth-child(1) {
+            align-self: start;
+        }
+
+        .grid-align :nth-child(2) {
+            align-self: end;
+        }
+
+        .grid-align :nth-child(3) {
+            align-self: stretch;
+        }
+
+        .auto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /*width: 600px;*/
+            grid-auto-rows: 100px;
+        }
+        .auto > div {
+            /*min-width: 100px;*/
+            width: 100px;
+            height: 100px;
+            background-color: #3b82f6;
+        }
+
+        .positioned {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(100px, 1fr));
+            grid-auto-rows: 100px;
+        }
+
+        .positioned > div {
+            width: 100px;
+            background-color: lightcoral;
+        }
+
+        .positioned .pst {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            position: absolute;
+            /*top: 40px;*/
+            /*left: 40px;*/
+            background-color: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <br>
+
+    <div class="flex">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <br>
+
+    <div class="grid-align">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <br>
+
+    <div class="auto">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <br>
+
+    <div class="positioned">
+        <div>1</div>
+        <div class="pst">2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

@@ -55,7 +55,7 @@ function classJudge() {
 // classJudge()
 
 
-function judge() {
+export function judge() {
     let a: number = 0;
     console.log((a as any).length)
 }

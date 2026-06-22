@@ -9,6 +9,7 @@
     "strictNullChecks": true,
   },
   "include": [
-    "ts/**/*"
+    "ts/**/*",
+    "challenges/**/*"
   ]
 }

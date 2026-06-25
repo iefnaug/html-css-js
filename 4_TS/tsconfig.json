@@ -7,6 +7,7 @@
     "noImplicitAny": true,
     //打开strictNullChecks以后，undefined和null只能赋值给自身，或者any类型和unknown类型的变量。
     "strictNullChecks": true,
+    "strict": true
   },
   "include": [
     "ts/**/*",

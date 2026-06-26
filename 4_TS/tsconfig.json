@@ -7,10 +7,13 @@
     "noImplicitAny": true,
     //打开strictNullChecks以后，undefined和null只能赋值给自身，或者any类型和unknown类型的变量。
     "strictNullChecks": true,
-    "strict": true
+    "strict": true,
+    //如果编译器检测到错误，就不会生成输出文件。
+    "noEmitOnError ": true
   },
   "include": [
     "ts/**/*",
-    "challenges/**/*"
+    "challenges/**/*",
+    "src/**/*"
   ]
 }
